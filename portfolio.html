@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <head>
+        <title>Arun's Projects</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body class="text-center">
+       <div class="container p-3 d-flex flex-column h-100 mx-auto">
+        <header class="nav-spacer">
+          <h3 class="masthead-brand">
+              <i class="nes-icon coin"></i> Arunachalam S
+          </h3>
+          <nav class="nav nav-masthead justify-content-center">
+           <a class="nav-link" href="index.html">Home</a>
+           <a class="nav-link active" href="portfolio.html">Projects</a>
+           <a class="nav-link" href="cv.html">CV</a>
+           <a class="nav-link" href="contact.html">contact</a>
+          </nav>
+        </header>
+        <div class="container nes-container mb-4">
+            <div class="col-md-12">
+               <h1>Top Projects</h1>
+            </div>
+            <div class="col-md-12 mb-4">
+                <button type="button" class="nes-btn is-success filter-button" data-filter="all">All</button>
+                <button type="button" class="nes-btn filter-button" data-filter="Machine-Learning">Machine Learning</button>
+                <button type="button" class="nes-btn is-primary filter-button" data-filter="Algorithms">Algorithms</button>
+                <button type="button" class="nes-btn is-warning filter-button" data-filter="Data-Structures">Data Structures</button>
+                <button type="button" class="nes-btn is-error filter-button" data-filter="Web-Technology">Web Technology</button>
+            </div>
+            <div class="row mb-4">
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Machine-Learning">
+                    <p class="title">Hello it's ML 1</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Data-Structures">
+                    <p class="title">Hello it's DS 1</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Algorithms">
+                    <p class="title">Hello it's A 1</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Data-Structures">
+                    <p class="title">Hello it's DS 2</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Machine-Learning">
+                    <p class="title">Hello it's ML 2</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Algorithms">
+                    <p class="title">Hello it's A 2</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Web-Technology">
+                    <p class="title">Hello it's WB 1</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Algorithms">
+                    <p class="title">Hello it's A 3</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+                <div class="nes-container with-title is-centered m-auto nes-pointer col-md-4 filter Web-Technology">
+                    <p class="title">Hello it's WB 2</p>
+                    <img src="https://unsplash.it/900/600" class="img-responsive" alt="" />
+                </div>
+            </div>   
+        </div>
+        <footer class="mt-auto">
+            <p>
+                Website Made With <i class="nes-icon is-small heart"></i>,by Me(Mario Fan)
+            </p>
+        </footer>
+       </div>
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ 
+       <script>
+           $(document).ready(function(){
+               $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter')
+               
+               if(value == "all"){
+                $('.filter').show('1000')
+               }
+               else{
+                $('.filter').not('.'+value).hide('3000')
+                $('.filter').filter('.'+value).show('3000')
+               }
+            })
+           })
+       </script>
+    </body>
+</html>
